@@ -1,0 +1,12 @@
+.shoe-section{
+    height: 18rem;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 6rem;
+}
+.heading-one{
+    margin-top: 3rem;
+}
