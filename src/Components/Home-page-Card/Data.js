@@ -1,4 +1,4 @@
-const Data_one=[
+const TopProductData=[
     {
         image:"/image/shoe3.jpeg",
         subtitle:"upto 10% off"
@@ -12,7 +12,7 @@ const Data_one=[
         subtitle:"upto 15% off"
     },
 ]
-const Data_Two=[
+const SportsWearData=[
     {
         image:"/image/shoe13.webp",
         subtitle:"upto 25% off"
@@ -26,4 +26,4 @@ const Data_Two=[
         subtitle:"upto 10% off"
     }
 ]
-export {Data_one,Data_Two} ; 
+export {TopProductData,SportsWearData} ; 

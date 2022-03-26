@@ -1,13 +1,13 @@
 import {Card} from './HomePageCard';
 import React from 'react';
 import "./CardSection.css";
-import {Data_one, Data_Two} from "./Data";
+import {TopProductData, SportsWearData} from "./Data";
 const Cards=()=>{
     return (
         <>
-            <h1 className='heading-one'>Trending In Sports Wear</h1>
+            <h1 className='heading-one'>Top Product On Offer</h1>
             < div className='shoe-section'>
-                {Data_one.map((value)=>{
+                {TopProductData.map((value)=>{
                     return (
                         <>
                         <Card
@@ -19,7 +19,7 @@ const Cards=()=>{
             </div>
             <h1 className='heading-one'>Trending In Sports Wear</h1>
             <div className='shoe-section'>
-                {Data_Two.map((value)=>{
+                {SportsWearData.map((value)=>{
                 return (
                     <>
                     <Card

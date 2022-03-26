@@ -7,7 +7,6 @@
     width: 18rem;
     border: 2px solid var(--dark-gray-color);
     margin-top: 1rem;
-    overflow-y: hidden;
 }
 .outer-img-div:hover{
     transform: scale(1.1)}
