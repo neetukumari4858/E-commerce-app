@@ -1,0 +1,45 @@
+@import url("../../style.css");
+
+.side-bar{
+    height: 35.3rem;
+    width: 15rem;
+    overflow-y: scroll;
+    box-shadow: 1px 1px 1px 1px var(--gainboro-color);
+}
+.side-bar::-webkit-scrollbar{
+    background-color: var(--white-color);
+    width: 0.3rem;
+}
+.side-bar::-webkit-scrollbar-thumb{
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background-color:var(--dark-gray-color);
+}
+.filter-heading{
+    margin-top: -1rem;
+}
+.unordered-list{
+    list-style: none;
+    margin-top: 1rem;
+}
+.filter-items-heading{
+    margin-top: 0.5rem;
+}
+.clear-btn{
+    width: 6rem;
+    height: 2.2rem;
+    border: 1px solid var(--black-color);
+    border-radius: 0.4rem;
+}
+.sidebarItem{
+    color:var(--dark-gray-color);
+}
+.product-container{
+    height: 34.2rem;
+    width: 64.5rem;
+    margin-top: -34.5rem;
+    margin-left: 16rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
