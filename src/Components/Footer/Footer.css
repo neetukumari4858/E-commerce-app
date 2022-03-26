@@ -1,0 +1,31 @@
+@import url("../../style.css");
+
+/* css for footer */
+.footer{
+    height:9rem;
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 2px 3px var(--gray-color);
+    background-color: var(--gray-color);
+}
+.social-media{
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 4rem;
+}
+.footer-content{
+    width: 18rem;
+    height: 8rem;
+    text-align: center;
+    overflow-y: hidden;
+}
+.heading-three{
+    margin-top: 1rem;    
+}
+.footer-icon{
+    font-size: 1.5rem;
+    color: var(--blue-color);
+    margin-top: 0.1rem;
+} 
