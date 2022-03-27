@@ -45,7 +45,7 @@ const ProductFilter=()=>{
             <li clasName="sidebarItem">
                 <input type="checkbox" value="Asics" name="Brand-btn"/>Asics
             </li>
-                {/*      */}
+            
             <h3 clasName="filter-items-heading">Rating</h3>
             <li clasName="sidebarItem">
                 <input type="radio" clasName="filter-item" value="price low to high" name="sort-btn"/>4 stars & above

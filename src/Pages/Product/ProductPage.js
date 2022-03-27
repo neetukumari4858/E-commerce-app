@@ -5,11 +5,11 @@ import {ProductList} from '../../Components/ProductList/ProductList'
 
 const ProductPage = () => {
   return (
-    <div>
-        <Navbar/>
-        <ProductFilter/>
-        <ProductList/>
-    </div>
+    <>
+      <Navbar/>
+      <ProductFilter/>
+      <ProductList/>
+    </>
   )
 }
 

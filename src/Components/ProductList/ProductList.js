@@ -6,7 +6,7 @@ const ProductList=()=>{
             <h1>All Product</h1>
             <div className="section-first">
                 { products.map((value,index_no)=>{
-                    const {image,title,price,Discounted_value,AddtoCart_btn}=value;
+                    const {_id,image,title,price,Discounted_value,AddtoCart_btn}=value;
                     return  <div key={index_no}>
                         <div className="card-container">
                             <div className="card-image">
