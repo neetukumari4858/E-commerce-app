@@ -1,1 +1,1 @@
-export  { WishlistPage } from "./WishlistPage/WishlistPage";
+export  { CartPage } from "./CartPage/CartPage";
