@@ -1,0 +1,85 @@
+@import url("../../style.css");
+
+.section-first{
+    height: 30rem;
+    width: 69rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7rem;
+    row-gap: 2rem;
+    margin-left: 2rem;
+    margin-top: -1rem;
+    overflow-y: scroll;
+}
+.img-size{
+    width: 15rem;
+    height: 12.2rem;
+}
+.card-container{
+    height: 21.1rem;
+    box-shadow: 1px 1px 1px 2px var(--gainboro-color);
+    margin-top: 2rem;
+    position: relative;
+    border-radius: 0.2rem;
+}
+.card-container:hover{
+    transform: scale(1.1);
+}
+.heading-four{
+    position: relative;
+    top: -1rem;
+}
+.btn-div{
+    height: 4rem;
+    text-align: center;
+    overflow-y: hidden;
+}
+.card-content{
+    height: 8.8rem;
+    background-color:var(--sky-blue-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.card-btn{
+    padding: 0.9rem 4rem;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bolder;
+}
+.card-btn:hover{
+    background-color:var(--red-color);
+}
+.card-text{
+    height: 4rem;
+    width: 12rem;
+    overflow-y: hidden;
+}
+.rating-div{
+    width:3.1rem;
+    height: 1.5rem;
+    color: var(--white-color);
+    background-color: var(--red-color);
+    position: absolute; 
+    top:14.4rem;
+    left: 9.5rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wishlist-icon{
+    color: var(--red-color);
+    height: 1.9rem;
+    width: 2rem;
+    border: 1px solid var(--gainboro-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;  
+}
