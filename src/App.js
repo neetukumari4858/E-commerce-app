@@ -1,9 +1,9 @@
-import { CartPage } from "./Pages/index";
+import { LoginPage } from "./Pages/index";
 
 function App() {
   return (
     <>
-      <CartPage/>
+      <LoginPage/>
     </>
   );
 }
