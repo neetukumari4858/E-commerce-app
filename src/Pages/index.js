@@ -1,1 +1,1 @@
-import { Cart } from '../../Components/Cart/Cart'
+export  { CartPage } from "./CartPage/CartPage";
