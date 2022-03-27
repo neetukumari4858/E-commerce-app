@@ -1,0 +1,48 @@
+@import url("../../style.css");
+
+.outer-product-side-bar{
+    height: 34.5rem;
+    width:80.5rem;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+}
+.login-container{
+    height: 23rem;
+    width: 23rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 1px 2px var(--dark-gray-color);
+}
+.login-content{
+    height: 18rem;
+    width: 19rem;
+    margin-top:1rem;
+}
+.user-input{
+    height: 2rem;
+    width: 18.5rem;
+    border: 1px solid var(--gray-color);
+}
+.login-btn{
+    padding: 0.6rem 8.4rem;
+    font-weight: bold;
+    background-color: var(--blue-color);
+    border: none;
+    color: white;
+    margin-top: 1rem;
+}
+h4{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+span{
+    color:var(--blue-color);
+    margin-left: 1.5rem;
+}
+.fa-angle-right{
+    color:var(--black-color);
+}
