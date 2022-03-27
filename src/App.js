@@ -1,9 +1,9 @@
-import { WishlistPage } from "./Pages/index";
+import { CartPage } from "./Pages/index";
 
 function App() {
   return (
     <>
-      <WishlistPage/>
+      <CartPage/>
     </>
   );
 }
