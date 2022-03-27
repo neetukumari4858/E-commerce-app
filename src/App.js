@@ -1,9 +1,9 @@
-import { LoginPage } from "./Pages/index";
+import {SignUpPage} from "./Pages/index";
 
 function App() {
   return (
     <>
-      <LoginPage/>
+      <SignUpPage/>
     </>
   );
 }
