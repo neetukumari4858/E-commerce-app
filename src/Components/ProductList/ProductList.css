@@ -5,9 +5,9 @@
     width: 69rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 7rem;
+    gap: 5rem;
     row-gap: 2rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
     margin-top: -1rem;
     overflow-y: scroll;
 }
@@ -16,8 +16,8 @@
     height: 12.2rem;
 }
 .card-container{
-    height: 21.1rem;
-    box-shadow: 1px 1px 1px 2px var(--gainboro-color);
+    height: 20.4rem;
+    box-shadow: var(--box-shadow);
     margin-top: 2rem;
     position: relative;
     border-radius: 0.2rem;
@@ -27,15 +27,17 @@
 }
 .heading-four{
     position: relative;
-    top: -1rem;
+   top: -0.9rem;
+   width: 5rem;
 }
 .btn-div{
-    height: 4rem;
+    height: 3rem;
     text-align: center;
     overflow-y: hidden;
+    margin-top: -1.5rem;
 }
 .card-content{
-    height: 8.8rem;
+    height: 8rem;
     background-color:var(--sky-blue-color);
     display: flex;
     flex-direction: column;
@@ -47,15 +49,15 @@
     color: var(--white-color);
     border: none;
     border-radius: 0.5rem;
-    font-weight: bolder;
 }
 .card-btn:hover{
     background-color:var(--red-color);
 }
 .card-text{
-    height: 4rem;
+    height:4.3rem;
     width: 12rem;
     overflow-y: hidden;
+    margin-top: -0.50rem;
 }
 .rating-div{
     width:3.1rem;
