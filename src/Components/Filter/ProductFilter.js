@@ -10,13 +10,8 @@ const ProductFilter=()=>{
             className="filter-items-heading">Price</h3>
             <li 
             className="sidebarItem">
-                <span>100  150   200</span><br/><br/>
-                <input type="range" min="0" max="100" /><br/><br/>
-
-            <h3 clasName="filter-items-heading">Price</h3>
-            <li clasName="sidebarItem">
                 <span>100  150   200</span>
-                <input type="range" min="0" max="100" value="50"/>
+                <input type="range" min="0" max="100" />
             </li>
 
             <h3 
@@ -89,6 +84,7 @@ const ProductFilter=()=>{
 
             <hr></hr>
             <button className="clear-btn">Clear Filter</button>
+            
         </ul>
     </div>
 
