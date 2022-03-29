@@ -16,7 +16,9 @@
     background-color:var(--dark-gray-color);
 }
 .filter-heading{
-    margin-top: -1rem;
+    margin-top: 1rem ;
+    margin-left: 2rem;
+    
 }
 .unordered-list{
     list-style: none;
@@ -32,7 +34,7 @@
     border-radius: 0.4rem;
 }
 .sidebarItem{
-    color:var(--dark-gray-color);
+    color:var(--black-color);
 }
 .product-container{
     height: 34.2rem;

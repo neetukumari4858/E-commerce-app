@@ -5,7 +5,6 @@ import "./HomePage.css";
 const HomePage=()=>{
     return(
         <div className="Home-data">
-            <Navbar/>
             <img className="home-img" src={"/image/home.jpeg"} alt="error"/> 
             <Cards/>
             <Footer/>

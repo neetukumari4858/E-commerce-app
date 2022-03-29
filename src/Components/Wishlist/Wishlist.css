@@ -1,34 +1,20 @@
 @import url("../../style.css");
 
-.product-container{
-    height: 34rem;
-    width: 79.8rem;
+.whishlist-section-first{
+    height: 25rem;
+    width: 40rem;
+    display: flex;
+    gap: 5rem;
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-left: 23rem;
 }
-.section-first{
-    height: 25rem;
-    width: 60rem;
-    display: flex;
-    margin-top: 5rem;
-    margin-left: -5rem;
-}
-.heading-four{
-    position: relative;
-    top: -1rem;
-}
-.btn-div{
+.wishlist-btn-div{
     display: flex;
     column-gap: 1rem;
-    margin-left: 1.5rem;
+margin-top: 1rem;
 }
-.card-content{
-    height: 6.5rem;
-    margin-top: -1.3rem;
-    background-color: var(--sky-blue-color);
-}
-.card-btn{
+.wishlist-card-btn{
     padding: 0.8rem 0.8rem;
     background-color: var(--blue-color);
     color: var(--white-color);
@@ -37,57 +23,9 @@
     border-radius: 0.5rem;
     font-weight: bold;
 }
-.card-btn:hover{
-    background-color:var(--red-color);
-}
-.card-text{
-    margin-left: 1.5rem;
-    height: 3.4rem;
-    width: 18rem;
-}
-.img-size{
-    width: 15rem;
-    height: 14rem;
-}
-.card-container{
-    height: 20.5rem;
-    width: 15rem;
-    box-shadow: 1px 1px 1px 2px var(--gainboro-color);
-    margin-top: 2rem;
+.whishlist-heading-four{
     position: relative;
-    border-radius: 0.2rem;
-    margin-left: 12rem;
-}
-.card-container:hover{
-    transform: scale(1.1);
-}
-.wishlist-icon{
-    color: var(--red-color);
-    height: 1.9rem;
-    width: 2rem;
-    border: 1px solid var(--gainboro-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;  
-}
-.rating-div{
-    width:3.1rem;
-    height: 1.5rem;
-    color:var(--white-color);
-    background-color: var(--red-color);
-    position: absolute; 
-    top:15rem;
-    left: 9.5rem;
-    border-radius: 0.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-h2{
-    position: relative;
-    left: 30rem;
+    top: -0.9rem;
+    width: 8rem;
+    margin-left: -0.4rem;
 }

@@ -6,7 +6,6 @@ import {ProductList} from '../../Components/ProductList/ProductList'
 const ProductPage = () => {
   return (
     <>
-      <Navbar/>
       <ProductFilter/>
       <ProductList/>
     </>
