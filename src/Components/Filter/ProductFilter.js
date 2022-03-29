@@ -12,6 +12,11 @@ const ProductFilter=()=>{
             className="sidebarItem">
                 <span>100  150   200</span><br/><br/>
                 <input type="range" min="0" max="100" /><br/><br/>
+
+            <h3 clasName="filter-items-heading">Price</h3>
+            <li clasName="sidebarItem">
+                <span>100  150   200</span>
+                <input type="range" min="0" max="100" value="50"/>
             </li>
 
             <h3 
@@ -82,9 +87,8 @@ const ProductFilter=()=>{
                 <input type="radio"  name="sort-btn"/>1 stars & above
             </li>
 
-            <hr></hr><br></br>
+            <hr></hr>
             <button className="clear-btn">Clear Filter</button>
-            <br></br>
         </ul>
     </div>
 
