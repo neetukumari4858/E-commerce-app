@@ -13,10 +13,10 @@
 }
 .img-size{
     width: 15rem;
-    height: 12.2rem;
+    height: 13rem;
 }
 .card-container{
-    height: 21.1rem;
+    height: 20.4rem;
     box-shadow: 1px 1px 1px 2px var(--gainboro-color);
     margin-top: 2rem;
     position: relative;
@@ -27,15 +27,17 @@
 }
 .heading-four{
     position: relative;
-    top: -1rem;
+    top: -0.9rem;
+    width: 5rem;
 }
 .btn-div{
-    height: 4rem;
+    height: 3rem;
     text-align: center;
     overflow-y: hidden;
+    margin-top: -2.1rem;
 }
 .card-content{
-    height: 8.8rem;
+    height: 7.4rem;
     background-color:var(--sky-blue-color);
     display: flex;
     flex-direction: column;
@@ -53,9 +55,10 @@
     background-color:var(--red-color);
 }
 .card-text{
-    height: 4rem;
+    height:4.3rem;
     width: 12rem;
     overflow-y: hidden;
+    margin-top: -0.50rem;
 }
 .rating-div{
     width:3.1rem;
