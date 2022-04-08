@@ -2,7 +2,8 @@ import { useProduct } from "../../Context/Context";
 import "./ProductFilter.css";
 const ProductFilter = () => {
     const { state, dispatch } = useProduct();
-    const { sortBy, category,rating } = state;
+    console.log(state ,"state data")
+    const {sortBy,category,rating,sliderPrice}=state;
     return (
         <div className="side-bar">
             <div className="filter-div">
@@ -36,11 +37,11 @@ const ProductFilter = () => {
 
                 <li
                     className="sidebarItem">
-                    <input type="checkbox" name="categories-btn" checked={catagory["Men"]}  onChange={() => dispatch({ type: "CATEGORY", payload: "Men" })} />Men
+                    <input type="checkbox" name="categories-btn" checked={category["Men"]}  onChange={() => dispatch({ type: "CATEGORY", payload: "Men" })} />Men
                 </li>
                 <li
                     className="sidebarItem">
-                    <input type="checkbox" name="categories-btn" checked={catagory["Woman"]} onChange={() => dispatch({ type: "CATEGORY", payload: "Woman" })} />Woman
+                    <input type="checkbox" name="categories-btn" checked={category["Woman"]} onChange={() => dispatch({ type: "CATEGORY", payload: "Woman" })} />Woman
                 </li>
 
                 <h3 className="filter-items-heading">Rating</h3>

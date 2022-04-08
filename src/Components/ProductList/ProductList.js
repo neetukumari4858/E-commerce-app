@@ -12,7 +12,6 @@ const ProductList=()=>{
     useEffect(()=>{
         async function getData(){
             const productResponse=await axios.get('/api/products');
-            console.log(productResponse)
             setProductsData(productResponse.data.products);
         }
         getData();
@@ -21,7 +20,6 @@ const ProductList=()=>{
     const filterData = CategoryFilterFunc(sortedData, category);
     const ratingData = RatingFunc(filterData,rating);
     const sliderData = SliderFunc(ratingData,sliderPrice);
-    console.log(productsData,'data');
     return(
         <div className="product-container">
             <h1>All Product</h1>
