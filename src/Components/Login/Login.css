@@ -16,9 +16,10 @@
     box-shadow: 1px 1px 1px 2px var(--dark-gray-color);
 }
 .login-content{
-    height: 18rem;
-    width: 19rem;
+    height: 20rem;
+    width: 21rem;
     margin-top:1rem;
+    margin-left: 2rem;
 }
 .user-input{
     height: 2rem;
@@ -39,9 +40,9 @@ h4{
 h2{
     text-align: center;
 }
-span{
+.forgot-Password{
     color:var(--blue-color);
-    margin-left: 1.5rem;
+    margin-left: 0.4rem;
 }
 .fa-angle-right{
     color:var(--black-color);

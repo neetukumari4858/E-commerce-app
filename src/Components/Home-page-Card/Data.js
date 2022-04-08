@@ -14,16 +14,16 @@ const TopProductData=[
 ]
 const SportsWearData=[
     {
-        image:"/image/shoe13.webp",
-        subtitle:"upto 25% off"
+        Sports_image:"/image/shoe13.webp",
+        Sports_subtitle:"upto 25% off"
     },
     {
-        image:"/image/shoe8.jpeg",
-        subtitle:"upto 15% off"
+        Sports_image:"/image/shoe8.jpeg",
+        Sports_subtitle:"upto 15% off"
     },
     {
-        image:"/image/shoe13.webp",
-        subtitle:"upto 10% off"
+        Sports_image:"/image/shoe13.webp",
+        Sports_subtitle:"upto 10% off"
     }
 ]
 export {TopProductData,SportsWearData} ; 

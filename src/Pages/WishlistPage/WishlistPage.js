@@ -5,7 +5,6 @@ import { Wishlist } from '../../Components/Wishlist/Wishlist';
 const WishlistPage = () => {
   return (
     <>
-        <Navbar/>
         <Wishlist/>
     </>
   )

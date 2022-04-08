@@ -14,7 +14,7 @@
     width: 100%;
 }
 .logo{
-    margin-left: -32rem;
+    margin-left: 2rem;
     margin-top: -1rem;
     color: var(--blue-color);
     font-size: 2rem;
@@ -66,15 +66,15 @@
     font-size: 1rem;
     font-weight: bold;
     color: var(--black-color);
+} 
+.iconText{
+    font-size: 0.8rem;
+    font-weight: bolder;
+    color: black;
+    font-weight: bolder;
+
 }
-.login-icon{
-    color:var(--blue-color);
-    font-size:1rem;
-}
-.cart-wishlist-icon{
-    color:var(--blue-color);
-    font-size:1rem; 
-}
+
 .outer-search-bar-div{
     height: 2.6rem;
     width:21rem;
@@ -83,3 +83,6 @@
     margin-right: 4rem;
     overflow-y: hidden;
 } 
+.login-icon{
+    color: var(--blue-color);
+}
