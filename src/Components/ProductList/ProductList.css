@@ -5,9 +5,9 @@
     width: 69rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 7rem;
+    gap: 5rem;
     row-gap: 2rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
     margin-top: -1rem;
     overflow-y: scroll;
 }
@@ -17,7 +17,7 @@
 }
 .card-container{
     height: 20.4rem;
-    box-shadow: 1px 1px 1px 2px var(--gainboro-color);
+    box-shadow: var(--box-shadow);
     margin-top: 2rem;
     position: relative;
     border-radius: 0.2rem;
@@ -34,10 +34,15 @@
     height: 3rem;
     text-align: center;
     overflow-y: hidden;
+
     margin-top: -2.1rem;
 }
 .card-content{
     height: 7.4rem;
+    margin-top: -1.5rem;
+}
+.card-content{
+    height: 8rem;
     background-color:var(--sky-blue-color);
     display: flex;
     flex-direction: column;
@@ -49,7 +54,6 @@
     color: var(--white-color);
     border: none;
     border-radius: 0.5rem;
-    font-weight: bolder;
 }
 .card-btn:hover{
     background-color:var(--red-color);

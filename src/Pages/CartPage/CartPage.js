@@ -5,7 +5,6 @@ import { Navbar } from '../../Components/Navigation/Navbar'
 const CartPage = () => {
   return (
     <>
-      <Navbar/>
       <Cart/>
     </>
   )

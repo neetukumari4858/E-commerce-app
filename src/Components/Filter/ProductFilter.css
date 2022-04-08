@@ -11,8 +11,8 @@
     width: 0.3rem;
 }
 .filter-heading{
-    margin-top: 2rem;
-    margin-left: 2rem;
+  margin-top: 1rem ;
+  margin-left: 2rem;
 }
 .unordered-list{
     list-style: none;
@@ -29,8 +29,8 @@
     margin-top: 1.6rem;
 }
 .sidebarItem{
-    color:var(--dark-gray-color);
     margin-top: 0.5rem;
+    color:var(--black-color);
 }
 .product-container{
     height: 34.2rem;

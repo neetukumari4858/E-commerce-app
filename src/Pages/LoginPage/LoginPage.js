@@ -5,7 +5,6 @@ import { Navbar } from '../../Components/Navigation/Navbar'
 const LoginPage = () => {
   return (
     <div>
-        <Navbar/>
         <Login/>
     </div>
   )
