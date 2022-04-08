@@ -36,11 +36,11 @@ const ProductFilter = () => {
 
                 <li
                     className="sidebarItem">
-                    <input type="checkbox" name="categories-btn" onChange={() => dispatch({ type: "CATEGORY", payload: "Men" })} />Men
+                    <input type="checkbox" name="categories-btn" checked={catagory["Men"]}  onChange={() => dispatch({ type: "CATEGORY", payload: "Men" })} />Men
                 </li>
                 <li
                     className="sidebarItem">
-                    <input type="checkbox" name="categories-btn" onChange={() => dispatch({ type: "CATEGORY", payload: "Woman" })} />Woman
+                    <input type="checkbox" name="categories-btn" checked={catagory["Woman"]} onChange={() => dispatch({ type: "CATEGORY", payload: "Woman" })} />Woman
                 </li>
 
                 <h3 className="filter-items-heading">Rating</h3>
