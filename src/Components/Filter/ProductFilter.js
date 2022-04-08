@@ -2,7 +2,7 @@ import { useProduct } from "../../Context/Context";
 import "./ProductFilter.css";
 const ProductFilter = () => {
     const { state, dispatch } = useProduct();
-    const { sortBy,rating } = state;
+    const { sortBy, category,rating } = state;
     return (
         <div className="side-bar">
             <div className="filter-div">
