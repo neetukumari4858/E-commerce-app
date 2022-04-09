@@ -2,7 +2,7 @@ import { useProduct } from "../../Context/Context";
 import "./ProductFilter.css";
 const ProductFilter = () => {
     const { state, dispatch } = useProduct();
-    const { sortBy, category, rating } = state;
+    const { sortBy, category, rating, sliderPrice} = state;
     return (
         <div className="side-bar">
             <div className="filter-div">
@@ -14,7 +14,7 @@ const ProductFilter = () => {
                 <li
                     className="sidebarItem">
                     <span>600  1000   2000</span>
-                    <input type="range" min="650" max="2000" value={state.sliderPrice}
+                    <input type="range" min="650" max="2000" value={sliderPrice}
                         onChange={(e) => dispatch({ type: "FILTER_BY_PRICE_RANGE", payload: e.target.value })} />
                 </li>
 

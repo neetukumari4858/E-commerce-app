@@ -6,7 +6,6 @@ import { useProduct } from "../../Context/Context";
 
 const ProductList=()=>{
     const {state}=useProduct();
-    console.log("state","display neetu")
     const {sortBy,category,rating,sliderPrice}=state;
 
     const [productsData, setProductsData] = useState([]);
