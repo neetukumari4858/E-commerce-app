@@ -12,9 +12,9 @@ makeServer();
 
 ReactDOM.render(
   <BrowserRouter>
-    <ProductProvider>
+     <ProductProvider >
       <App/>
-    </ProductProvider>
+      </ProductProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );
