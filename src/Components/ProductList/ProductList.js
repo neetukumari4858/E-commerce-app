@@ -19,14 +19,13 @@ const ProductList=()=>{
     const sortedData = HighFun(productsData, sortBy);
     const filterData = CategoryFilterFunc(sortedData, category);
     const ratingData = RatingFunc(filterData,rating);
-    console.log( ratingData,"rating"); 
     const sliderData = SliderFunc(ratingData, sliderPrice);
     console.log(sliderData,"slider"); 
     return(
         <div className="product-container">
             <h1>All Product</h1>
             <div className="section-first">       
-                { ratingData.map(({_id,image,title,Rating,price,Discounted_value,AddtoCart_btn})=>{
+                { sliderData.map(({_id,image,title,Rating,price,Discounted_value,AddtoCart_btn})=>{
                 return  <div key={_id}>
                     <div className="card-container">
                         <div className="card-image">
