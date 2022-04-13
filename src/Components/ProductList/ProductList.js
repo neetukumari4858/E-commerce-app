@@ -1,37 +1,61 @@
 import "./ProductList.css";
-import { products } from "../../backend/db/products";
+import axios from "axios";
+import { useState,useEffect } from "react";
+import {HighFun ,CategoryFilterFunc,RatingFunc,SliderFunc} from '../../Utilities.js/index'
+import { useProduct } from "../../Context/Context";
+
 const ProductList=()=>{
+    const {state}=useProduct();
+    const {sortBy,category,rating,sliderPrice}=state;
+
+    const [productsData, setProductsData] = useState([]);
+    useEffect(()=>{
+        async function getData(){
+            const productResponse=await axios.get('/api/products');
+            setProductsData(productResponse.data.products);
+        }
+        getData();
+    },[]);
+    const sortedData = HighFun(productsData, sortBy);
+    const filterData = CategoryFilterFunc(sortedData, category);
+    const ratingData = RatingFunc(filterData,rating);
+    const sliderData = SliderFunc(ratingData, sliderPrice);
+    console.log(sliderData,"slider");
     return(
         <div className="product-container">
             <h1>All Product</h1>
             <div className="section-first">       
-                { products.map((value,index_no)=>{
-                    const {_id,image,title,price,Discounted_value,AddtoCart_btn}=value;
-                    return  <div key={index_no}>
-                        <div className="card-container">
-                            <div className="card-image">
-                            <i className="fa-solid fa-heart wishlist-icon"></i>
-                                <img className="img-size" src={image}/>
-                            </div>
-                            <div className="card-content">
-                                <div className="card-text">
-                                    <h3 >{title}</h3>
-                                    <h4 className="heading-four">{Discounted_value }
-                                    &nbsp;&nbsp;&nbsp;<s>{price}</s></h4>
+                { sliderData.map(({_id,image,title,Rating,price,Discounted_value,AddtoCart_btn})=>{
+                return  <div key={_id}>
+                    <div className="card-container">
+                        <div className="card-image">
+                        <i className="fa-solid fa-heart wishlist-icon"></i>
+                            <img className="img-size" src={image}/>
+                        </div>
+                        <div className="card-content">
+                            <div className="card-text">
+                                <h3 >{title}</h3>
+                                <h4 className="heading-four">₹{Discounted_value }
+                                &nbsp;&nbsp;&nbsp;<s>{price}</s></h4>
 
-                                    <span className="rating-div">
-                                        <p>4 <i className="fa-solid fa-star"></i></p>
-                                    </span>
-                                </div><br/><br/>
-                                <div className="btn-div">
-                                    <button className="card-btn">{AddtoCart_btn}</button>
-                                </div>
+                                <span className="rating-div">
+                                    <p>{Rating} <i className="fa-solid fa-star"></i></p>
+                                </span>
+                            </div><br/><br/>
+                            <div className="btn-div">
+                                <button className="card-btn">{AddtoCart_btn}</button>
                             </div>
                         </div>
                     </div>
+                </div>
                 })} 
             </div>
         </div> 
     )
 };
 export {ProductList};
+
+
+
+
+
