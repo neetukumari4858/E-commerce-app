@@ -1,4 +1,4 @@
-import { useProduct } from "../../Context/Context";
+import { useProduct } from "../../Context/FilterContext";
 import "./ProductFilter.css";
 const ProductFilter = () => {
     const { state, dispatch } = useProduct();
