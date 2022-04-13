@@ -35,8 +35,8 @@ const ProductList=()=>{
                         <div className="card-content">
                             <div className="card-text">
                                 <h3 >{title}</h3>
-                                <h4 className="heading-four">₹{Discounted_value }
-                                &nbsp;&nbsp;&nbsp;<s>{price}</s></h4>
+                                <h4 className="heading-four">₹ {Discounted_value }
+                                &nbsp;&nbsp;&nbsp;<s>₹ {price}</s></h4>
 
                                 <span className="rating-div">
                                     <p>{Rating} <i className="fa-solid fa-star"></i></p>
