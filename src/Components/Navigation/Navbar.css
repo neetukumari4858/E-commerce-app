@@ -30,10 +30,10 @@
 .nav-home-shop-link{
     height: 2rem;
     width: 17rem;
-    margin-left: 5rem;
+    margin-left: 8rem;
     margin-top: -1.4rem;
     display: flex;
-    justify-content: space-evenly;
+    column-gap: 2rem;
     font-size: 1.2rem;
     text-decoration: none;
     color: var(--black-color);
@@ -85,4 +85,19 @@
 } 
 .login-icon{
     color: var(--blue-color);
+}
+.cart_badge{
+    border-radius: 50%;
+    width: 1.3rem;
+    height: 1.2rem;
+    font-size: 0.6rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -0.2rem;
+    margin-left: 0.5rem;
+    background-color: var(--red-color);
+    color: var(--white-color); 
 }

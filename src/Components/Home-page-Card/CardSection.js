@@ -2,6 +2,7 @@ import {Card} from './HomePageCard';
 import React from 'react';
 import "./CardSection.css";
 import { SportsCard } from './SportsWear-card';
+import {Link} from "react-router-dom"
 import {TopProductData,SportsWearData} from "./Data";
 const Cards=()=>{
     return (
@@ -11,9 +12,11 @@ const Cards=()=>{
                 {TopProductData.map((value,index)=>{
                     return (
                         <div key={index}>
-                            <Card
-                                image={value.image}
-                                subtitle={value.subtitle}/>
+                           <Link  className="offer_Product" to="/ProductPage">
+                                <Card 
+                                    image={value.image}
+                                    subtitle={value.subtitle}/>
+                            </Link>
                         </div>
                     );
                 })}
@@ -23,9 +26,11 @@ const Cards=()=>{
                 {SportsWearData.map((value1,index_no)=>{
                 return (
                     <div key={index_no}>
-                        <SportsCard
-                            Sports_image={value1.Sports_image}
-                            Sports_subtitle={value1.Sports_subtitle}/>
+                       <Link  className="offer_Product" to="/ProductPage">
+                            <SportsCard
+                                Sports_image={value1.Sports_image}
+                                Sports_subtitle={value1.Sports_subtitle}/>
+                         </Link>
                     </div>
                 );
                 })}

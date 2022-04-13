@@ -3,11 +3,15 @@
 /* css for cart */
 
 .cart-section{
-    height: 25rem;
-    width: 60rem;
+    height: 50rem;
+    width: 30rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 15rem;
     margin-top: 7rem;
+    margin-left: -11rem;
+    flex-direction: row;
+    row-gap: 4rem;
 }
 .cart-btn{
     padding: 0.8rem 1.5rem;
@@ -34,23 +38,24 @@
 }
 .cart-product-container{
     height: 35rem;
+    width: 85.8rem;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
+    margin-left: -5rem;
 }
 
 .cart-text{
     height:7rem;
     width: 14rem;
     overflow-y: hidden;
-    
     margin-bottom: -2rem;
     margin-left: 0.8rem;  
 }
 .cart-container{
-    height: 21.8rem;
+    height: 22.5rem;
     width: 15rem;
-    box-shadow:var(--box-shadow)
+    box-shadow:var(--box-shadow);
 }
 .cart-content{
     height: 10.4rem;
@@ -74,11 +79,12 @@
 /* Price detail */
 
 .detail{
-    height: 24rem;
+    height: 22rem;
     width: 20rem;
     box-shadow: 1px 1px 1px 4px var(--sky-blue-color);
     display: flex;
     justify-content: center;
+    margin-top: 7rem;
 }
 .inner-detail-div{
     height: 20rem;
@@ -88,9 +94,8 @@
 .price{
     height: 13rem;
     width: 3rem;
-
-    margin-top: -15rem;
-    margin-left:15rem ;
+    margin-top: -13.8rem;
+    margin-left:15rem;
 }
 hr{
     margin-left: 0.3rem;
@@ -100,17 +105,24 @@ span{
 }
 .cart-heading{
     position: relative;
-    left:30rem;
+    left:25rem;
 }
 h5{
     margin-top: -3rem;
 }
 .quantity-btn{
     padding: 0.2rem 0.5rem;
+    margin-left: 0.5rem;
+    
 }
 .increment-decrement{
     border-radius: 50%;
     padding: 0.3rem 0.7rem;
     margin-top: 1rem;
+    margin-left: 0.5rem;
 } 
- 
+.emptyCartImage{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
