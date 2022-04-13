@@ -20,7 +20,7 @@ const ProductList=()=>{
     const filterData = CategoryFilterFunc(sortedData, category);
     const ratingData = RatingFunc(filterData,rating);
     const sliderData = SliderFunc(ratingData, sliderPrice);
-    console.log(sliderData,"slider"); 
+    console.log(sliderData,"slider");
     return(
         <div className="product-container">
             <h1>All Product</h1>
