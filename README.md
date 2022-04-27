@@ -32,8 +32,9 @@ Royal is an E-commerce website project built using REACT. It has features like f
 
 ## Screenshots
 
-![Screenshot from 2022-03-26 15-44-15](https://user-images.githubusercontent.com/90403664/165453995-4df67899-2901-4acc-8ea1-65f394![Screenshot from 2022-03-26 15-46-04](https://user-images.githubusercontent.com/90403664/165454033-0716bd7f-cc3a-41d4-a651-0f1c0fc2d359.png)
-8dcda8.png)
+![Screenshot from 2022-04-27 11-55-24](https://user-images.githubusercontent.com/90403664/165454728-de2c14a6-5254-43e5-9a25-2fd1023934d2.png)
+
+![Screenshot from 2022-04-27 11-33-34](https://user-images.githubusercontent.com/90403664/165454806-78e6636a-8e84-4277-b653-9195a29c3f85.png)
 
 
 
