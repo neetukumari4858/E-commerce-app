@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './SignUp.css'
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai'
+import { toast } from 'react-toastify'
 
 const SignUp = () => {
   const [inputType, setinputType] = useState('password')
-
   const [newUser, setNewUser] = useState({
     email: '',
     password: '',
@@ -14,6 +14,44 @@ const SignUp = () => {
     lastName: '',
     checkPolicy: false,
   })
+  const navigate = useNavigate()
+  const { email, password, confirmPassword, firstName, lastName , checkPolicy} = newUser
+  const signupHandler = async (email, password, firstName) => {
+    if (firstName && lastName && email && password && confirmPassword) {
+      if (!checkPolicy) {
+        toast.warning(
+          'tick the check box and agree to the terms and conditions',
+        )
+      }
+      if (confirmPassword !== password) {
+        toast.error('The passwords entered do not match')
+      }
+      const response = await axios.post('api/auth/signup', {
+        email,
+        password,
+        firstName,
+      })
+      navigate('/')
+      toast.success(
+        'Congratulations, your account has been successfully created!',
+      )
+      if (response.status === 201) {
+        localStorage.setItem('user', JSON.stringify(response.data.createdUser))
+        localStorage.setItem('token', response.data.encodedToken)
+        userDispatch({
+          type: 'SIGNUP',
+          payload: {
+            user: response.data.createdUser,
+            token: response.data.encodedToken,
+          },
+        })
+      } else {
+        toast.error('Something went wrong')
+      }
+    } else {
+      toast.warning('Please fill the fields')
+    }
+  }
 
   return (
     <div className="outer-Login-container">
@@ -25,6 +63,7 @@ const SignUp = () => {
             type="text"
             className="sign-input"
             placeholder="Enter your Name"
+            value={firstName}
             onChange={(event) =>
               setNewUser((prev) => ({ ...prev, firstName: event.target.value }))
             }
@@ -35,6 +74,7 @@ const SignUp = () => {
             type="text"
             className="sign-input"
             placeholder="Enter your Last Name"
+            value={lastName}
             onChange={(event) =>
               setNewUser((prev) => ({ ...prev, lastName: event.target.value }))
             }
@@ -46,6 +86,7 @@ const SignUp = () => {
             type="text"
             className="sign-input"
             placeholder="annu@neog.com"
+            value={email}
             onChange={(event) =>
               setNewUser((prev) => ({ ...prev, email: event.target.value }))
             }
@@ -55,6 +96,7 @@ const SignUp = () => {
           <label className="signUp-lebel">Password</label>
           <input
             type={inputType}
+            value={password}
             className="sign-input"
             onChange={(event) =>
               setNewUser((prev) => ({ ...prev, password: event.target.value }))
@@ -79,13 +121,13 @@ const SignUp = () => {
               </p>
             )}
           </div>
-
           <label className="signUp-lebel confirm-Password">
             Confirm Password
           </label>
           <input
             type="text"
             className="sign-input"
+            value={confirmPassword}
             onChange={(event) =>
               setNewUser((prev) => ({
                 ...prev,
@@ -99,9 +141,9 @@ const SignUp = () => {
             <input
               type="checkbox"
               id="termsAndCondition"
-              checked={newUser.checkPolicy}
+              checked={checkPolicy}
               onChange={() =>
-                setNewUser({ ...newUser, checkPolicy: !newUser.checkPolicy })
+                setNewUser({ ...newUser, checkPolicy: !checkPolicy })
               }
             />
             <label htmlFor="termsAndCondition" className="terms-and-condition">
@@ -110,7 +152,9 @@ const SignUp = () => {
           </div>
 
           <div>
-            <button className="sign-btn bg-red">Sign up</button>
+            <button className="sign-btn bg-red" onClick={signupHandler}>
+              Sign up
+            </button>
           </div>
           <h4 className="alreadyHaveAccount">
             Already have an account?

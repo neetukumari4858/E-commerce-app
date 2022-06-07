@@ -1,15 +1,49 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { useAuth } from '../../Context/AuthContext'
+import { toast } from 'react-toastify'
 
 import './Login.css'
 const Login = () => {
   const [inputType, setinputType] = useState('password')
-  const [loginUserData, setloginUserData] = useState({
+  const navigate = useNavigate()
+  const { userDispatch } = useAuth()
+  const [user, setUser] = useState({
     email: '',
     password: '',
-    checkPolicy: false,
   })
+
+  const { email, password } = user
+  const loginBtnHandler = async (email, password) => {
+    if (!user.email || !user.password) {
+      toast.warning('Please fill all the feild')
+      return;
+    }
+    const response = await axios.post('/api/auth/login', {
+      email,
+      password,
+    })
+    console.log(response, 'res')
+    if (response.status === 200) {
+      localStorage.setItem('user', JSON.stringify(response.data.foundUser))
+      const token = response.data.encodedToken
+      localStorage.setItem('token', token)
+      userDispatch({
+        type: 'LOGIN',
+        payload: {
+          user: response.data.foundUser,
+          token: response.data.encodedToken,
+        },
+      })
+      navigate('/')
+
+      toast.success('Login Successfull !')
+    } else {
+      toast.error('Login Failed!')
+    }
+  }
 
   return (
     <div className="outer-Login-container">
@@ -22,9 +56,9 @@ const Login = () => {
               className="user-input"
               type="email"
               placeholder="  demo@gmail.com "
-              value={loginUserData.email}
+              value={email}
               onChange={(event) =>
-                setloginUserData((prev) => ({
+                setUser((prev) => ({
                   ...prev,
                   email: event.target.value,
                 }))
@@ -36,9 +70,9 @@ const Login = () => {
               type={inputType}
               className="user-input password"
               placeholder="  Enter Password..."
-              value={loginUserData.password}
+              value={password}
               onChange={(event) =>
-                setloginUserData((prev) => ({
+                setUser((prev) => ({
                   ...prev,
                   password: event.target.value,
                 }))
@@ -65,18 +99,21 @@ const Login = () => {
             </div>
             <div className="footerDiv">
               <div className="login-grid">
-                <button type="button" className="videologin-btn bg-red">
+                <button
+                  type="button"
+                  className="videologin-btn bg-red"
+                  onClick={() => loginBtnHandler()}
+                >
                   Login
                 </button>
                 <button
                   type="button"
                   className="videologin-btn  bg-white"
                   onClick={() => {
-                    setloginUserData({
-                      ...loginUserData,
+                    setUser({
+                      ...user,
                       email: 'demo@gmail.com',
                       password: 'demo123',
-                      checkPolicy: true,
                     })
                   }}
                 >
