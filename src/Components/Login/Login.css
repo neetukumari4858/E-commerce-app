@@ -1,49 +1,87 @@
 @import url("../../style.css");
 
-.outer-product-side-bar{
-    height: 34.5rem;
-    width:80.5rem;
-    overflow-y: scroll;
-    display: flex;
-    justify-content: center;
+.outer-Login-container {
+  height: 30rem;
+  width: 100%;
+  margin: -37 0 12rem;
+  background-color: var(--dark-black-color);
+  display: flex;
+  justify-content: center;
 }
-.login-container{
-    height: 23rem;
-    width: 23rem;
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    box-shadow: 1px 1px 1px 2px var(--dark-gray-color);
+
+.login-outer-container {
+  height: 25rem;
+  width: 23rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 2px var(--dark-gray-color);
+  border: 1px solid var(--gainboro-color);
 }
-.login-content{
-    height: 20rem;
-    width: 21rem;
-    margin-top:1rem;
-    margin-left: 2rem;
+.login-content-container {
+  height: 23rem;
+  width: 21rem;
+  color: var(--white-color);
+  margin-top: -0.5rem;
 }
-.user-input{
-    height: 2rem;
-    width: 18.5rem;
-    border: 1px solid var(--gray-color);
+.user-input {
+  height: 2rem;
+  width: 20rem;
+  margin-left: 0.3rem;
+  border: 1px solid var(--gray-color);
+  color: var(--black-color);
 }
-.login-btn{
-    padding: 0.6rem 8.4rem;
-    font-weight: bold;
-    background-color: var(--blue-color);
-    border: none;
-    color: var(--white-color);
-    margin-top: 1rem;
+.create-account {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--black-color);
 }
-h4{
-    text-align: center;
+.Login-heading-two {
+  text-align: center;
+  color: var(--black-color);
 }
-h2{
-    text-align: center;
+.videologin-btn {
+  background-color: var(--blue-color);
+  border: transparent;
+  border-radius: 0.2rem;
+  color: var(--white-color);
+  font-weight: 900;
+  cursor: pointer;
 }
-.forgot-Password{
-    color:var(--blue-color);
-    margin-left: 0.4rem;
+.videologin-btn:hover {
+  background-color: var(--light-blue-color);
 }
-.fa-angle-right{
-    color:var(--black-color);
+
+.lebel-text {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.7rem;
+  font-size: 1.2rem;
+  color: var(--black-color);
+}
+
+.createAccount {
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  color: var(--black-color);
+}
+
+.passwordIcon {
+  color: var(--black-color);
+  position: relative;
+  top: -2.8rem;
+  left: 18.3rem;
+}
+.footerDiv {
+  position: relative;
+  top: -3rem;
+}
+.login-grid {
+  display: grid;
+  grid-template-columns: 21rem;
+  grid-template-rows: 2.3rem 2.3rem;
+  grid-row-gap: 1rem;
+  margin-top: 2.2rem;
 }
