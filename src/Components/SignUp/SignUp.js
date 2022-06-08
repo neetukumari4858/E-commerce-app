@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import './SignUp.css'
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai'
 import { toast } from 'react-toastify'
+import axios from 'axios'
+import { useAuth } from '../../Context/AuthContext'
 
 const SignUp = () => {
   const [inputType, setinputType] = useState('password')
@@ -14,39 +16,66 @@ const SignUp = () => {
     lastName: '',
     checkPolicy: false,
   })
+  const {userDispatch}=useAuth()
   const navigate = useNavigate()
-  const { email, password, confirmPassword, firstName, lastName , checkPolicy} = newUser
-  const signupHandler = async (email, password, firstName) => {
-    if (firstName && lastName && email && password && confirmPassword) {
-      if (!checkPolicy) {
+  const {
+    email,
+    password,
+    confirmPassword,
+    firstName,
+    lastName,
+    checkPolicy,
+  } = newUser
+  const signupHandler = async (email, password, firstName,confirmPassword,lastName) => {
+    if (
+      firstName !== '' &&
+      lastName !== '' &&
+      password !== '' &&
+      confirmPassword !== '' &&
+      email !== ''
+    ) {
+      if (checkPolicy) {
+        if (password === confirmPassword) {
+          try{
+            const response = await axios.post('/api/auth/signup', {
+              email,
+              password,
+              firstName,
+              confirmPassword,
+              lastName
+            })
+            navigate('/')
+            toast.success(
+              'Congratulations, your account has been successfully created!',
+            )
+            if (response.status === 201) {
+              localStorage.setItem(
+                'user',
+                JSON.stringify(response.data.createdUser),
+              )
+              localStorage.setItem('token', response.data.encodedToken)
+              userDispatch({
+                type: 'SIGNUP',
+                payload: {
+                  user: response.data.createdUser,
+                  token: response.data.encodedToken,
+                },
+              })
+            } else {
+              toast.error('Something went wrong')
+            }
+
+          }catch(error){
+            console.log(error)
+
+          }
+        } else {
+          toast.error('The passwords entered do not match')
+        }
+      } else {
         toast.warning(
           'tick the check box and agree to the terms and conditions',
         )
-      }
-      if (confirmPassword !== password) {
-        toast.error('The passwords entered do not match')
-      }
-      const response = await axios.post('api/auth/signup', {
-        email,
-        password,
-        firstName,
-      })
-      navigate('/')
-      toast.success(
-        'Congratulations, your account has been successfully created!',
-      )
-      if (response.status === 201) {
-        localStorage.setItem('user', JSON.stringify(response.data.createdUser))
-        localStorage.setItem('token', response.data.encodedToken)
-        userDispatch({
-          type: 'SIGNUP',
-          payload: {
-            user: response.data.createdUser,
-            token: response.data.encodedToken,
-          },
-        })
-      } else {
-        toast.error('Something went wrong')
       }
     } else {
       toast.warning('Please fill the fields')

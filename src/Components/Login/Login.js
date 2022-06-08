@@ -17,31 +17,31 @@ const Login = () => {
 
   const { email, password } = user
   const loginBtnHandler = async (email, password) => {
-    if (!user.email || !user.password) {
-      toast.warning('Please fill all the feild')
-      return;
-    }
-    const response = await axios.post('/api/auth/login', {
-      email,
-      password,
-    })
-    console.log(response, 'res')
-    if (response.status === 200) {
-      localStorage.setItem('user', JSON.stringify(response.data.foundUser))
-      const token = response.data.encodedToken
-      localStorage.setItem('token', token)
-      userDispatch({
-        type: 'LOGIN',
-        payload: {
-          user: response.data.foundUser,
-          token: response.data.encodedToken,
-        },
+    if (email!=="" && password!=="") {
+      const response = await axios.post('/api/auth/login', {
+        email,
+        password,
       })
-      navigate('/')
-
-      toast.success('Login Successfull !')
-    } else {
-      toast.error('Login Failed!')
+      console.log(response, 'res')
+      if (response.status === 200) {
+        localStorage.setItem('user', JSON.stringify(response.data.foundUser))
+        const token = response.data.encodedToken
+        localStorage.setItem('token', token)
+        userDispatch({
+          type: 'LOGIN',
+          payload: {
+            user: response.data.foundUser,
+            token: response.data.encodedToken,
+          },
+        })
+        navigate('/')
+  
+        toast.success('Login Successfull !')
+      } else {
+        toast.error('Login Failed!')
+      }
+    }else{
+      toast.error("fill all the feild")
     }
   }
 
