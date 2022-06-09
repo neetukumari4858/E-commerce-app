@@ -16,8 +16,8 @@ const Login = () => {
   })
 
   const { email, password } = user
-  const loginBtnHandler = async (email, password) => {
-    if (email!=="" && password!=="") {
+  const loginBtnHandler = async () => {
+    if (email !== '' && password !== '') {
       const response = await axios.post('/api/auth/login', {
         email,
         password,
@@ -35,13 +35,13 @@ const Login = () => {
           },
         })
         navigate('/')
-  
+
         toast.success('Login Successfull !')
       } else {
         toast.error('Login Failed!')
       }
-    }else{
-      toast.error("fill all the feild")
+    } else {
+      toast.error('fill all the feild')
     }
   }
 

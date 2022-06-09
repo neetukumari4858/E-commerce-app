@@ -16,6 +16,7 @@ const SignUp = () => {
     lastName: '',
     checkPolicy: false,
   })
+  
   const {userDispatch}=useAuth()
   const navigate = useNavigate()
   const {
@@ -26,7 +27,7 @@ const SignUp = () => {
     lastName,
     checkPolicy,
   } = newUser
-  const signupHandler = async (email, password, firstName,confirmPassword,lastName) => {
+  const signupHandler = async () => {
     if (
       firstName !== '' &&
       lastName !== '' &&
@@ -37,6 +38,7 @@ const SignUp = () => {
       if (checkPolicy) {
         if (password === confirmPassword) {
           try{
+            console.log(email, password, firstName,confirmPassword,lastName,"data")
             const response = await axios.post('/api/auth/signup', {
               email,
               password,
@@ -48,6 +50,7 @@ const SignUp = () => {
             toast.success(
               'Congratulations, your account has been successfully created!',
             )
+            console.log(response.data.createdUser,"createduser")
             if (response.status === 201) {
               localStorage.setItem(
                 'user',

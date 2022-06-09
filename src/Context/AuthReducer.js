@@ -14,6 +14,9 @@ export const authReducer = (userDetail, userAction) => {
           token: userAction.payload.token,
         }
       }
+      case 'LOGOUT': {
+        return { ...userDetail, user: {}, token: '' }
+      }
       default:
         return userDetail
     }
