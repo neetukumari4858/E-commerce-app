@@ -139,7 +139,11 @@ const Cart = () => {
           </>
         ) : (
           <div className="emptyCartImage">
-            <img  className='empty-cart-img' src="./image/404Img.jpg" alt="emptyCartImg" />
+            <img
+              className="empty-cart-img"
+              src="./image/cartImg.jpg"
+              alt="emptyCartImg"
+            />
           </div>
         )}
       </div>

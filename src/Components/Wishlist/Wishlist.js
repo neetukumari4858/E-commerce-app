@@ -16,7 +16,7 @@ const Wishlist = () => {
   }
   return (
     <>
-      <h2>
+      <h2 className='whishlist-heading'>
         My <span>Wishlist</span>({wishlist.length}){' '}
       </h2>
       {wishlist.length >= 1 ? (
@@ -87,7 +87,7 @@ const Wishlist = () => {
       ) : (
         <>
           <div className="emptyWishlistImage">
-            <img src="./image/emptyCartImg.webp" alt="emptyCartImg" />
+            <img src="./image/empty-wishlistImg.png" className='empty_Img' alt="emptyCartImg" />
           </div>
         </>
       )}
