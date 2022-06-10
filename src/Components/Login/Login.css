@@ -30,7 +30,8 @@
   width: 20rem;
   margin-left: 0.3rem;
   border: 1px solid var(--gray-color);
-  color: var(--black-color);
+  color: var(--black-color); 
+  padding-left: 1.2rem
 }
 .create-account {
   text-align: center;
