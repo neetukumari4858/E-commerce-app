@@ -29,7 +29,7 @@ Royal is an E-commerce website project built using REACT. It has features like f
     - Login
     - Logout
 
-Here is Link :-[Link](https://endearing-pixie-c5fd06.netlify.app)
+Here is Link :-[Link](https://polite-maamoul-410ddf.netlify.app)
 
 ## Screenshots
 
