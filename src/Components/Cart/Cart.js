@@ -139,7 +139,7 @@ const Cart = () => {
           </>
         ) : (
           <div className="emptyCartImage">
-            <img src="./image/emptyCartImg.webp" alt="emptyCartImg" />
+            <img  className='empty-cart-img' src="./image/404Img.jpg" alt="emptyCartImg" />
           </div>
         )}
       </div>

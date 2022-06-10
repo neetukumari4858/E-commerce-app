@@ -105,7 +105,7 @@ span{
 }
 .cart-heading{
     position: relative;
-    left:25rem;
+    left:40rem;
 }
 h5{
     margin-top: -3rem;
@@ -121,8 +121,9 @@ h5{
     margin-top: 1rem;
     margin-left: 0.5rem;
 } 
-.emptyCartImage{
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+
+.empty-cart-img{
+    height: 20rem;
+    width: 70rem;
+    margin-top: 6rem;
 }
