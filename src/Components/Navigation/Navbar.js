@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
-import { useCart } from '../../Context/CartContext'
+import { useProducts } from '../../Context/productContext'
 import { useAuth } from '../../Context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 const Navbar = () => {
-  const { cartState } = useCart()
-  const { cart, wishlist } = cartState
+  const { productState } = useProducts()
+  const { cart, wishlist } = productState
   const navigate = useNavigate()
   const { userDetail, userDispatch } = useAuth()
   const { token } = userDetail
