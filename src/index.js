@@ -1,23 +1,25 @@
-
-import "./index.css";
+import './index.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { App } from "./App";
-import { makeServer } from "./server";
-import { CartProvider } from "./Context/CartContext"
-import { ProductProvider } from "./Context/FilterContext";
-import { BrowserRouter } from "react-router-dom";
+import { App } from './App'
+import { makeServer } from './server'
+import { ProductsProvider } from './Context/productContext'
+import { ProductProvider } from './Context/FilterContext'
+import { BrowserRouter } from 'react-router-dom'
+import { AuthProvider } from './Context/AuthContext'
 
 // Call make Server
-makeServer();
+makeServer()
 
 ReactDOM.render(
   <BrowserRouter>
-    <ProductProvider >
-      <CartProvider>
-        <App />
-      </CartProvider>
-    </ProductProvider>
+    <AuthProvider>
+      <ProductProvider>
+        <ProductsProvider>
+          <App />
+        </ProductsProvider>
+      </ProductProvider>
+    </AuthProvider>
   </BrowserRouter>,
-  document.getElementById("root")
-);
+  document.getElementById('root'),
+)

@@ -2,102 +2,120 @@
 /* body{
     font-family: 'Poppins', sans-serif ,bolder; 
 } */
-.sum{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: var(--gray-color);
-    box-shadow: 1px 1px 1px 2px var(--gainboro-color);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    width: 100%;
+.sum {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--gray-color);
+  box-shadow: 1px 1px 1px 2px var(--gainboro-color);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 100%;
 }
-.logo{
-    margin-left: 2rem;
-    margin-top: -1rem;
-    color: var(--blue-color);
-    font-size: 2rem;
-    font-size: bolder;
+.logo {
+  margin-left: 2rem;
+  margin-top: -1rem;
+  color: var(--blue-color);
+  font-size: 2rem;
+  font-size: bolder;
 }
-.nav-section{
-    height: 3rem;
-    width: 50%;
-    margin-top: 1rem;
-    overflow-y: hidden;
-    overflow-x: hidden; 
+.nav-section {
+  height: 3rem;
+  width: 50%;
+  margin-top: 1rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
-.nav-home-shop-link{
-    height: 2rem;
-    width: 17rem;
-    margin-left: 8rem;
-    margin-top: -1.4rem;
-    display: flex;
-    column-gap: 2rem;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: var(--black-color);
-    list-style: none;
+.nav-home-shop-link {
+  height: 2rem;
+  width: 17rem;
+  margin-left: 8rem;
+  margin-top: -1.4rem;
+  display: flex;
+  column-gap: 2rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--black-color);
+  list-style: none;
 }
-.search-bar{
-    height:2rem;
-    width: 30rem;
-    border-radius: 0.2rem;
-    margin-top: 0.6rem;
-    border: none;
-    background-color:var(--white-color); 
+.search-bar {
+  height: 2rem;
+  width: 30rem;
+  border-radius: 0.2rem;
+  margin-top: 0.6rem;
+  border: none;
+  background-color: var(--white-color);
 }
-.nav-link{
-    text-decoration: none;
-    color:var(--blue-color);
+.nav-link {
+  text-decoration: none;
+  color: var(--blue-color);
 }
-.nav-icons{
-    height: 2.9rem;
-    width: 16rem;
-    margin-top: -2.3rem;
-    margin-left: 22rem;
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
+.nav-icons {
+  height: 2.9rem;
+  width: 16rem;
+  margin-top: -2.3rem;
+  margin-left: 22rem;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
 }
-.icon-content{
-    display: flex;
-    align-items: flex-end;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--black-color);
-} 
-.iconText{
-    font-size: 0.8rem;
-    font-weight: bolder;
-    color: black;
-    font-weight: bolder;
+.icon-content {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--black-color);
+}
+.iconText {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color: black;
+  font-weight: bolder;
+}
 
+.outer-search-bar-div {
+  height: 2.6rem;
+  width: 21rem;
+  display: flex;
+  justify-content: center;
+  margin-right: 4rem;
+  overflow-y: hidden;
+}
+.login-icon {
+  color: var(--blue-color);
+}
+.cart_badge {
+  border-radius: 50%;
+  width: 1.3rem;
+  height: 1.2rem;
+  font-size: 0.6rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -0.2rem;
+  margin-left: 0.5rem;
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+/*  */
+.login_btn {
+  position: relative;
+  top: 0.4rem;
+  height: 1.9rem;
+  width: 4rem;
+  background-color: var(--blue-color);
+  border: none;
+  color: var(--white-color);
+  font-weight: 900;
+  border-radius: 0.2rem;
+  cursor: pointer;
 }
 
-.outer-search-bar-div{
-    height: 2.6rem;
-    width:21rem;
-    display: flex;
-    justify-content: center;
-    margin-right: 4rem;
-    overflow-y: hidden;
-} 
-.login-icon{
-    color: var(--blue-color);
-}
-.cart_badge{
-    border-radius: 50%;
-    width: 1.3rem;
-    height: 1.2rem;
-    font-size: 0.6rem;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -0.2rem;
-    margin-left: 0.5rem;
-    background-color: var(--red-color);
-    color: var(--white-color); 
+.nav_link {
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: bolder;
 }

@@ -105,7 +105,7 @@ span{
 }
 .cart-heading{
     position: relative;
-    left:25rem;
+    left:40rem;
 }
 h5{
     margin-top: -3rem;
@@ -121,8 +121,33 @@ h5{
     margin-top: 1rem;
     margin-left: 0.5rem;
 } 
+
+.empty-cart-img{
+    height: 20rem;
+    width: 70rem;
+    margin-top: -4rem;
+}
+button{
+    cursor: pointer;
+}
+.shop_now_btn{
+    width: 8rem;
+    height: 2.5rem;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 900;
+    /* cursor: pointer; */
+        
+}
+.shop_now_btn-text-color{
+    color: var(--white-color);
+    text-decoration: none;
+
+}
 .emptyCartImage{
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
 }
