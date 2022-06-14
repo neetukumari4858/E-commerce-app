@@ -28,9 +28,9 @@
 .user-input {
   height: 2rem;
   width: 20rem;
-  margin-left: 0.3rem;
   border: 1px solid var(--gray-color);
   color: var(--black-color);
+  padding-left: 0.7rem;
 }
 .create-account {
   text-align: center;
