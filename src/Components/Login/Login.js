@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate ,useLocation} from 'react-router-dom'
 import axios from 'axios'
 import { useAuth } from '../../Context/AuthContext'
 import { toast } from 'react-toastify'
@@ -14,6 +14,7 @@ const Login = () => {
     email: '',
     password: '',
   })
+  const location = useLocation()
 
   const { email, password } = user
   const loginBtnHandler = async () => {
@@ -34,7 +35,7 @@ const Login = () => {
             token: response.data.encodedToken,
           },
         })
-        navigate('/')
+        navigate(location?.state?.from?.pathname || -1, { replace: true })
 
         toast.success('Login Successfull !')
       } else {

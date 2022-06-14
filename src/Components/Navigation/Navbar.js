@@ -10,9 +10,9 @@ const Navbar = () => {
   const { productState } = useProducts()
   const { cart, wishlist } = productState
   const navigate = useNavigate()
-  const { userDetail, userDispatch } = useAuth()
-  const { token } = userDetail
-
+  const {userDispatch } = useAuth()
+  const token=localStorage.getItem("token")
+  
   const logoutHandler = () => {
     localStorage.removeItem('user')
     localStorage.removeItem('token')
@@ -57,7 +57,10 @@ const Navbar = () => {
 
           <i className=" fa-solid fa-cart-shopping login-icon">
             <li>
-              <p className="cart_badge">{cart.length}</p>
+              {cart.length > 0 && token ? (
+                <p className="cart_badge">{cart.length}</p>
+              ) : null}
+
               <Link className="nav-link iconText" to="/CartPage">
                 Cart
               </Link>
@@ -65,7 +68,10 @@ const Navbar = () => {
           </i>
           <i className="fa-solid fa-heart login-icon">
             <li>
-              <p className="cart_badge">{wishlist.length}</p>
+              {wishlist.length > 0 && token ? (
+                <p className="cart_badge">{wishlist.length}</p>
+              ) : null}
+
               <Link className="nav-link iconText" to="/WishlistPage">
                 Whishlist
               </Link>
