@@ -10,8 +10,8 @@ const Navbar = () => {
   const { productState } = useProducts()
   const { cart, wishlist } = productState
   const navigate = useNavigate()
-  const { userDetail, userDispatch } = useAuth()
-  const { token } = userDetail
+  const { userDispatch } = useAuth()
+  const token = localStorage.getItem('token')
 
   const logoutHandler = () => {
     localStorage.removeItem('user')
