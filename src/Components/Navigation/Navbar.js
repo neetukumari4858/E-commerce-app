@@ -39,9 +39,6 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="nav-section">
-        <div className="outer-search-bar-div">
-          <input type="text" className="search-bar" placeholder="   Search.." />
-        </div>
         <ul className="nav-icons">
           {token ? (
             <button className="login_btn nav_link" onClick={logoutHandler}>
