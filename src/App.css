@@ -1,3 +1,7 @@
 *{
   font-family: 'Poppins', sans-serif ,bolder; 
 }
+body{
+  display: flex;
+  justify-content: center;
+}

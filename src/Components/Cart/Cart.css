@@ -36,13 +36,13 @@
    width: 8rem;
    margin-left: 0.2rem;
 }
+
 .cart-product-container{
     height: 35rem;
-    width: 85.8rem;
+    width: 100%;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    margin-left: -5rem;
 }
 
 .cart-text{

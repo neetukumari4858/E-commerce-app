@@ -8,6 +8,8 @@ const ProductsProvider = ({ children }) => {
   const [productState, productDispatch] = useReducer(productReducer, {
     cart: [],
     wishlist: [],
+    addresses:[],
+    orders:[]
   })
   return (
     <productContext.Provider value={{ productState, productDispatch }}>
