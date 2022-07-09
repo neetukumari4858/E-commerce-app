@@ -6,6 +6,7 @@ import { useAuth } from '../../Context/AuthContext'
 import { AddressSelect } from '../AddressSelect/AddressSelector'
 import { CartBill } from './cartBill'
 import { Cheackoutbill } from './Checkoutbill'
+import { AddressModel } from '../AddressModel/AddressModel';
 
 const Cart = () => {
   const { productState, productDispatch } = useProducts()
@@ -17,6 +18,7 @@ const Cart = () => {
   const { cart, addresses } = productState
   const [checkout, setCheckout] = useState(false)
   const [showAddressModal, setAddressModal] = useState(false)
+  const [selectAddress, setSelectAddress] = useState(null);
 
   const totalPrice = cart.reduce(
     (acc, item) =>
@@ -32,6 +34,11 @@ const Cart = () => {
 
   return (
     <>
+        {showAddressModal?(
+          <AddressModel
+          showAddressModal={showAddressModal}
+         />
+        ):null}
       <div className="cart-product-container">
         {!checkout ? (
           cart.length >= 1 ? (
@@ -149,10 +156,14 @@ const Cart = () => {
             </div>
           )
         ) : (
-          <main>
+          <main className='order-datail-body'>
             <h1>checkout</h1>
-            <section>
-              <AddressSelect addresses={addresses} />
+            <section className='order-detail-setion'>
+              <AddressSelect addresses={addresses} 
+            
+              setAddressModal={ setAddressModal}
+
+              />
               <Cheackoutbill
                 cart={cart}
                 totalPrice={totalPrice}

@@ -1,3 +1,4 @@
+import "./checkoutbill.css";
 export const Cheackoutbill = ({
   cart,
   totalPrice,
@@ -16,9 +17,7 @@ export const Cheackoutbill = ({
       name: "Royal",
       description: "Thank you",
       image: "https://example.com/your_logo",
-    //   handler: function (response) {
-    //     cart.map((item) => removeFromCart(item._id, token, productDispatch));
-    //   },
+   
       prefill: {
         name: user.firstName,
         email: user.email,
@@ -36,14 +35,14 @@ export const Cheackoutbill = ({
     rzp1.on("payment.failed", function (response) {});
   };
   return (
-    <div className="detail">
+  //  <div className="order-datail-body">
       <div className="inner-detail-div">
-        <h1>Order details</h1> <hr></hr>
+        <h1 className="order-detal-hearding">Order Details</h1>
         <h3>items </h3>
         <h3>Price</h3>
         <h3>Delivery charges</h3>
         <h3>Total</h3>
-        <button className="cart-btn" onClick={paymentintegration}>
+        <button className="cart-bill-btn" onClick={paymentintegration}>
           checkout
         </button>
         <div className="price">
@@ -53,6 +52,6 @@ export const Cheackoutbill = ({
           <h3>{totalAmount}</h3>
         </div>
       </div>
-    </div>
+    //  </div>
   );
 };

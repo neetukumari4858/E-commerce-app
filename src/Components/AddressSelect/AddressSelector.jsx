@@ -1,5 +1,6 @@
+import "./AddressSelect.css"
 import {BsPlusLg} from "react-icons/bs";
-export const AddressSelect = ({ addresses, setSelectAddress, setAddressModal}) => {
+export const AddressSelect = ({ setAddressModal}) => {
   return (
     <div className="Addaddress-btn">
       <button className="plus-icon-btn" onClick={()=>setAddressModal(true)}>
