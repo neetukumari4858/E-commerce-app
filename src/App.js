@@ -10,7 +10,7 @@ import { useState } from "react";
 function App() {
   const [showAddressModal, setAddressModal] = useState(false);
   return (
-    <>
+    <div className="App">
      {showAddressModal ? (
         <AddressModal
           showAddressModal={showAddressModal}
@@ -40,7 +40,7 @@ function App() {
           <Route path="/LoginPage" element={<LoginPage/>}/>
           <Route path="/SignUpPage" element={<SignUpPage/>}/>
       </Routes>
-    </>
+    </div>
     
   );
 }

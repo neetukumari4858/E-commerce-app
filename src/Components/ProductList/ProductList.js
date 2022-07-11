@@ -9,7 +9,7 @@ import {
   RatingFunc,
   SliderFunc,
 } from '../../Utilities.js/index'
-
+import {ProductFilter} from "./../../Components/Filter/ProductFilter"
 import { useProduct } from '../../Context/FilterContext'
 import { Link } from 'react-router-dom'
 import { useProducts } from '../../Context/productContext'
@@ -68,6 +68,7 @@ const ProductList = () => {
 
   return (
     <div className="inner_body">
+      <ProductFilter/>
       <div className="product-container">
         <h1>All Product ({sliderData.length})</h1>
         <h3 className="loading">{loading}</h3>
