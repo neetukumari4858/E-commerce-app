@@ -22,8 +22,8 @@
   height: 3rem;
   width: 50%;
   margin-top: 1rem;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
 }
 .nav-home-shop-link {
   height: 2rem;
@@ -77,7 +77,7 @@
   width: 21rem;
   display: flex;
   justify-content: center;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 .login-icon {
   color: var(--blue-color);
