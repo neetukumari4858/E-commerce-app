@@ -24,20 +24,19 @@
 .clear-btn {
   width: 6rem;
   height: 2.2rem;
-  border: 1px solid var(--black-color);
+  background-color:var(--blue-color);
+  color:  var(--white-color);
   border-radius: 0.4rem;
   margin-top: 1.6rem;
+  border: none;
+  font-weight: 900;
+}
+.clear-btn:hover{
+  background-color: var(--red-color);
 }
 .sidebarItem {
   margin-top: 0.5rem;
   color: var(--black-color);
 }
-.product-container {
-  height: 34.2rem;
-  width: 64.5rem;
-  margin-top: -34.5rem;
-  margin-left: 16rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+
+

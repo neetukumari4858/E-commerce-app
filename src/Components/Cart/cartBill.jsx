@@ -17,10 +17,10 @@ export const CartBill = ({
           Place order
         </button>
         <div className="price">
-          <h3>{cart.length}</h3>
-          <h3>{totalPrice}</h3>
-          <h3>{deliveryCharges}</h3>
-          <h3>{totalAmount}</h3>
+          <h3>{cart.length} ₹</h3>
+          <h3>{totalPrice} ₹</h3>
+          <h3>{deliveryCharges} ₹</h3>
+          <h3>{totalAmount} ₹</h3>
         </div>
       </div>
     </div>

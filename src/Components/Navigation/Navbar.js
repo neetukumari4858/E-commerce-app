@@ -12,6 +12,8 @@ const Navbar = () => {
   const navigate = useNavigate()
   const { userDispatch } = useAuth()
   const token = localStorage.getItem('token')
+  const users = localStorage.getItem('user')
+
 
   const logoutHandler = () => {
     localStorage.removeItem('user')
@@ -54,7 +56,8 @@ const Navbar = () => {
 
           <i className=" fa-solid fa-cart-shopping login-icon">
             <li>
-              <p className="cart_badge">{cart.length}</p>
+              {users && token && cart.length>0 ? (<p className="cart_badge">{cart.length}</p>):null}
+              
               <Link className="nav-link iconText" to="/CartPage">
                 Cart
               </Link>
@@ -62,7 +65,8 @@ const Navbar = () => {
           </i>
           <i className="fa-solid fa-heart login-icon">
             <li>
-              <p className="cart_badge">{wishlist.length}</p>
+              {users && token && wishlist.length>0 ?( <p className="cart_badge">{wishlist.length}</p>):null}
+             
               <Link className="nav-link iconText" to="/WishlistPage">
                 Whishlist
               </Link>

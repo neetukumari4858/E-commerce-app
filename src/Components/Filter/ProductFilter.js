@@ -5,6 +5,9 @@ const ProductFilter = () => {
 
     const {sortBy,category,rating,sliderPrice}=state;
     return (
+       
+
+  
         <div className="side-bar">
             <div className="filter-div">
                 <h3 className="filter-heading" >FILTERS</h3>
@@ -67,6 +70,7 @@ const ProductFilter = () => {
 
             </ul>
         </div>
+      
     )
 };
 export { ProductFilter };

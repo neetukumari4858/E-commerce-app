@@ -7,17 +7,17 @@ import { AddressSelect } from '../AddressSelect/AddressSelector'
 import { CartBill } from './cartBill'
 import { Cheackoutbill } from './Checkoutbill'
 import { AddressModel } from '../AddressModel/AddressModel';
+import { toast } from 'react-toastify';
 
 const Cart = () => {
   const { productState, productDispatch } = useProducts()
   const { userDetail } = useAuth()
   const { token } = userDetail
-  // const users = localStorage.getItem('user')
-  // const user = JSON.parse(users)
 
   const { cart, addresses } = productState
   const [checkout, setCheckout] = useState(false)
   const [showAddressModal, setAddressModal] = useState(false)
+  
   const [selectAddress, setSelectAddress] = useState(null);
 
   const totalPrice = cart.reduce(
@@ -30,6 +30,7 @@ const Cart = () => {
 
   const removeFromCartHandler = (_id) => {
     removeFromCart(_id, token, productDispatch)
+    toast.success("Removed from Cart")
   }
 
   return (
@@ -37,6 +38,8 @@ const Cart = () => {
         {showAddressModal?(
           <AddressModel
           showAddressModal={showAddressModal}
+          setAddressModal={setAddressModal}
+
          />
         ):null}
       <div className="cart-product-container">
@@ -73,12 +76,15 @@ const Cart = () => {
                                 Quantity:
                                 <button
                                   className="increment-decrement"
-                                  onClick={() =>
+                                  onClick={() =>{
                                     productDispatch({
                                       type: 'DECREASE_QUANTITY',
                                       payload: { _id: _id, Quentity: Quentity },
                                     })
+                                    toast.success("Decreased the Quantity by one")
                                   }
+                                  }
+
                                 >
                                   -
                                 </button>
@@ -87,11 +93,13 @@ const Cart = () => {
                                 </button>
                                 <button
                                   className="increment-decrement"
-                                  onClick={() =>
+                                  onClick={() =>{
                                     productDispatch({
                                       type: 'INCREASE_QUANTITY',
                                       payload: { _id: _id, Quentity: Quentity },
                                     })
+                                    toast.success("Increased the Quantity by one")
+                                  }
                                   }
                                 >
                                   +
@@ -112,7 +120,7 @@ const Cart = () => {
                               </button>
                               <button
                                 className="cart-btn"
-                                onClick={() =>
+                                onClick={() =>{
                                   productDispatch({
                                     type: 'MOVE_TO_WISHLIST',
                                     payload: {
@@ -125,6 +133,9 @@ const Cart = () => {
                                       Quentity: Quentity,
                                     },
                                   })
+                                  toast.success("Moved to the wishlist")
+                                }
+
                                 }
                               >
                                 WISHLIST
@@ -160,8 +171,9 @@ const Cart = () => {
             <h1>checkout</h1>
             <section className='order-detail-setion'>
               <AddressSelect addresses={addresses} 
-            
               setAddressModal={ setAddressModal}
+              setSelectAddress={setSelectAddress}
+              
 
               />
               <Cheackoutbill
@@ -170,7 +182,7 @@ const Cart = () => {
                 deliveryCharges={deliveryCharges}
                 totalAmount={totalAmount}
                 setCheckout={setCheckout}
-                setAddressModal={setAddressModal}
+                selectAddress={selectAddress}
               />
             </section>
           </main>

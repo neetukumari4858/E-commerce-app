@@ -1,14 +1,15 @@
 .cart-bill-btn{
-    padding: 0.7rem 7.2rem;
-    background-color:var( --light-blue-color);
+    padding: 0.7rem 7.7rem;
+    background-color:var(--blue-color);
     color: var(--white-color);
     border: none;
     font-weight: bolder;
     cursor: pointer;
 }
+.cart-bill-btn:hover{
+    background-color: var(--red-color);
+}
 .order-detal-hearding{
     border-bottom: 1px solid black;
 }
-/* .inner-detail-div{ */
-    /* border: 1px solid red; */
-/* } */
+
