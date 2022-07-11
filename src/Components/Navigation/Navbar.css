@@ -20,6 +20,10 @@
   font-size: 2rem;
   font-size: bolder;
   text-decoration: none;
+  /* cursor: pointer; */
+}
+label{
+  cursor: pointer;
 }
 .nav-section {
   height: 3rem;
