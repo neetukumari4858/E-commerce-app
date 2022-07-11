@@ -16,9 +16,9 @@ const Wishlist = () => {
     toast.success('Successfuly Removed from wishlist ')
   }
   return (
-    <>
+    <div className='wishlist_inner_body'>
       <h2 className="whishlist-heading">
-        My <span>Wishlist</span>({wishlist.length}){' '}
+        My <span>Wishlist</span>({wishlist.length})
       </h2>
       {wishlist.length >= 1 ? (
         <>
@@ -100,7 +100,7 @@ const Wishlist = () => {
           </div>
         </>
       )}
-    </>
+    </div>
   )
 }
 export { Wishlist }

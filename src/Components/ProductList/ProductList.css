@@ -1,7 +1,10 @@
 @import url("../../style.css");
-
+.product_title {
+  position: relative;
+  top: 3rem;
+}
 .section-first {
-  height: 36rem;
+  height: 34rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -9,10 +12,7 @@
   align-items: flex-start;
   gap: 3rem;
   row-gap: 2rem;
-  
-  margin-top: -1rem;
   overflow-y: scroll;
-  border: 1px solid red;
 }
 .img-size {
   width: 15rem;
@@ -97,9 +97,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 1px solid red;
 }
 .inner_body {
   display: flex;
-  border: 1px solid red;
 }

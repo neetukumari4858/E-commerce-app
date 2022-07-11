@@ -8,7 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15rem;
-  margin-top: 7rem;
+  margin-top: 15rem;
   margin-left: -11rem;
   flex-direction: row;
   row-gap: 4rem;
@@ -40,7 +40,6 @@
 .cart-product-container {
   height: 35rem;
   width: 100%;
-  /* overflow-x: hidden; */
   display: flex;
   justify-content: center;
 }
@@ -84,7 +83,7 @@
   box-shadow: 1px 1px 1px 4px var(--sky-blue-color);
   display: flex;
   justify-content: center;
-  margin-top: 7rem;
+  margin-top: 15rem;
 }
 .inner-detail-div {
   height: 20rem;
@@ -104,8 +103,8 @@ span {
   margin-left: 0.5rem;
 }
 .cart-heading {
-  position: relative;
-  left: 40rem;
+  margin-top: 7rem;
+  text-align: center;
 }
 h5 {
   margin-top: -3rem;

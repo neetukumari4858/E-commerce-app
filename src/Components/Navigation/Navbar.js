@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className="sum">
       <div className="nav-section">
-        <label className="logo">Royal</label>
+      <Link  className="logo" to="/ProductPage"><label>Royal</label></Link>
         <ul className="nav-home-shop-link">
           <li>
             <Link className="nav-link icon-content" to="/">
