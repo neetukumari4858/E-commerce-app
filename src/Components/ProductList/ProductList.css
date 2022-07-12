@@ -25,6 +25,9 @@
   position: relative;
   border-radius: 0.2rem;
 }
+.card-container:hover {
+  transform: scale(1.02);
+}
 .heading-four {
   position: relative;
   top: -0.9rem;

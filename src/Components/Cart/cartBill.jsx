@@ -8,7 +8,7 @@ export const CartBill = ({
   return (
     <div className="detail">
       <div className="inner-detail-div">
-        <h1>PRICE DETAILS</h1> <hr></hr>
+        <h2 className="price_detail_border">Price Details</h2> 
         <h3>items </h3>
         <h3>Price</h3>
         <h3>Delivery charges</h3>

@@ -161,3 +161,7 @@ button {
   height: 30rem;
   width: 60%;
 }
+.price_detail_border{
+  margin-top: 2rem;
+  border-bottom: 1px solid black;
+}
