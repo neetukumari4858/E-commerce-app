@@ -3,6 +3,7 @@ import './Wishlist.css'
 import { useProducts } from '../../Context/productContext'
 import { removeFromWishlist } from '../../service/wishlistService/removeFromWishlist'
 import { useAuth } from '../../Context/AuthContext'
+import { toast } from 'react-toastify'
 
 const Wishlist = () => {
   const { productState, productDispatch } = useProducts()
@@ -11,13 +12,13 @@ const Wishlist = () => {
   const { token } = userDetail
 
   const removeWishlistHandler = (_id) => {
-      console.log(token,productDispatch);
     removeFromWishlist(_id, token, productDispatch)
+    toast.success('Successfuly Removed from wishlist ')
   }
   return (
-    <>
-      <h2 className='whishlist-heading'>
-        My <span>Wishlist</span>({wishlist.length}){' '}
+    <div className='wishlist_inner_body'>
+      <h2 className="whishlist-heading">
+        My <span>Wishlist</span>({wishlist.length})
       </h2>
       {wishlist.length >= 1 ? (
         <>
@@ -40,7 +41,10 @@ const Wishlist = () => {
                         className="wishlist-icon"
                         onChange={() => removeWishlistHandler(_id)}
                       >
-                        <i className="fa-solid fa-heart"  onClick={() => removeWishlistHandler(_id)}></i>
+                        <i
+                          className="fa-solid fa-heart"
+                          onClick={() => removeWishlistHandler(_id)}
+                        ></i>
                       </button>
                     </div>
                     <div className="card-content">
@@ -59,7 +63,7 @@ const Wishlist = () => {
                       <div className="wishlist-btn-div">
                         <button
                           className="wishlist-card-btn"
-                          onClick={() =>
+                          onClick={() => {
                             productDispatch({
                               type: 'MOVE_TO_CART',
                               payload: {
@@ -72,7 +76,8 @@ const Wishlist = () => {
                                 Quentity: Quentity,
                               },
                             })
-                          }
+                            toast.success('Moved to Cart')
+                          }}
                         >
                           MOVE TO CART
                         </button>
@@ -87,11 +92,15 @@ const Wishlist = () => {
       ) : (
         <>
           <div className="emptyWishlistImage">
-            <img src="./image/empty-wishlistImg.png" className='empty_Img' alt="emptyCartImg" />
+            <img
+              src="./image/empty-wishlistImg.png"
+              className="empty_Img"
+              alt="emptyCartImg"
+            />
           </div>
         </>
       )}
-    </>
+    </div>
   )
 }
 export { Wishlist }

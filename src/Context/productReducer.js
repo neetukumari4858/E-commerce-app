@@ -70,6 +70,12 @@ const productReducer = (productState, action) => {
             cart: [...cart.filter((removeItem) => removeItem._id !== action.payload._id)]
           };
         }
+
+        case "ADD-ADDRESS":
+          return {
+            ...productState,
+            addresses:  action.payload,
+          };
   
       default:
         return { ...productState }

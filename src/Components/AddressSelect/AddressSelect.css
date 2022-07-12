@@ -1,0 +1,33 @@
+.plus-icon-btn{
+    font-size: 2rem;
+    border: none;
+    background-color: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+.plus-icon{
+    font-size: 1.3rem;
+    margin: 0.5rem 0 0 1rem; 
+}
+.selected-address{
+    height: 20rem;
+    width: 25rem;
+}
+.address_input-text{
+    color:var(--black-color);
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+.selected_address_div{
+    width: 18rem;
+    height: 7.2rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    box-shadow:1px 1px 5px 1px gray;
+}
+.address_paragraph{
+    margin-top: 1rem;
+}

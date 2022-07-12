@@ -1,44 +1,42 @@
 @import url("../../style.css");
 
-.side-bar{
-    height: 37.3rem;
-    width: 15rem;
-    overflow-y: scroll;
-    box-shadow: 1px 1px 1px 1px var(--gainboro-color);
+.side-bar {
+  height: 100vh;
+  width: 15rem;
+  overflow-y: scroll;
+  box-shadow: 1px 1px 1px 1px var(--gainboro-color);
 }
-.side-bar::-webkit-scrollbar{
-    background-color: var(--white-color);
-    width: 0.5px;
+.side-bar::-webkit-scrollbar {
+  background-color: var(--white-color);
+  width: 0.5px;
 }
-.filter-heading{
-  margin-top: 2rem ;
+.filter-heading {
+  margin-top: 2rem;
   margin-left: 2rem;
 }
-.unordered-list{
-    list-style: none;
-    margin-top: 1.5rem;
+.unordered-list {
+  list-style: none;
+  margin-top: 2.7rem;
 }
-.filter-items-heading{
-    margin-top: 1rem;
+.filter-items-heading {
+  margin-top: 1rem;
 }
-.clear-btn{
-    width: 6rem;
-    height: 2.2rem;
-    border: 1px solid var(--black-color);
-    border-radius: 0.4rem;
-    margin-top: 1.6rem;
+.clear-btn {
+  width: 6rem;
+  height: 2.2rem;
+  background-color:var(--blue-color);
+  color:  var(--white-color);
+  border-radius: 0.4rem;
+  margin-top: 1.6rem;
+  border: none;
+  font-weight: 900;
 }
-.sidebarItem{
-    margin-top: 0.5rem;
-    color:var(--black-color);
+.clear-btn:hover{
+  background-color: var(--red-color);
 }
-.product-container{
-    height: 34.2rem;
-    width: 64.5rem;
-    margin-top: -34.5rem;
-    margin-left: 16rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.sidebarItem {
+  margin-top: 1rem;
+  color: var(--black-color);
 }
+
 

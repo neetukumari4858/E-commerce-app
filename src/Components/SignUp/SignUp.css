@@ -3,7 +3,7 @@
 .signup-container{
     height: 32rem;
     width: 23rem;
-    margin-top: 3rem;
+    margin-top: 9rem;
     display: flex;
     justify-content: center;
     box-shadow: 1px 1px 1px 2px var(--dark-gray-color);

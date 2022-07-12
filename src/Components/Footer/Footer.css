@@ -19,7 +19,7 @@
     width: 18rem;
     height: 8rem;
     text-align: center;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 .heading-three{
     margin-top: 1rem;    

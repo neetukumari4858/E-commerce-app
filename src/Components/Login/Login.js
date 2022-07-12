@@ -22,7 +22,6 @@ const Login = () => {
         email,
         password,
       })
-      console.log(response, 'res')
       if (response.status === 200) {
         localStorage.setItem('user', JSON.stringify(response.data.foundUser))
         const token = response.data.encodedToken
