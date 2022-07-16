@@ -1,10 +1,10 @@
 @import url("../../style.css");
 .product_title {
   position: relative;
-  top: 3rem;
+  top: 5rem;
 }
 .section-first {
-  height: 34rem;
+  height: 30rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +12,7 @@
   align-items: flex-start;
   gap: 3rem;
   row-gap: 2rem;
+  margin-top: 1rem;
   overflow-y: scroll;
 }
 .img-size {
