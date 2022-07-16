@@ -146,7 +146,7 @@ button {
   flex-direction: column;
   align-items: center;
 }
-/*  */
+
 .order-datail-body {
   height: 100vh;
   width: 100%;
@@ -154,6 +154,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  bottom: -1rem;
 }
 .order-detail-setion {
   display: flex;
@@ -165,3 +166,4 @@ button {
   margin-top: 2rem;
   border-bottom: 1px solid black;
 }
+
