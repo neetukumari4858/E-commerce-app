@@ -8,6 +8,8 @@ const Cart = () => {
   const { productState, productDispatch } = useProducts()
   const { userDetail } = useAuth()
   const { token } = userDetail
+  const users = localStorage.getItem('user')
+  const user = JSON.parse(users)
 
   const { cart } = productState
   const totalPrice = cart.reduce(
@@ -20,6 +22,34 @@ const Cart = () => {
 
   const removeFromCartHandler = (_id) => {
     removeFromCart(_id, token, productDispatch)
+  }
+
+  const paymentintegration = () => {
+    var options = {
+      key: 'rzp_test_Nz7sNsDcGD5Zle',
+      amount: totalAmount * 100,
+      currency: 'INR',
+      name: 'Royal',
+      description: 'Thank you',
+      image: 'https://example.com/your_logo',
+      handler: function (response) {
+        cart.map((item) => removeFromCart(item._id, token, productDispatch))
+      },
+      prefill: {
+        name: user.firstName,
+        email: user.email,
+        contact: '9999999999',
+      },
+      notes: {
+        address: 'Razorpay Corporate Office',
+      },
+      theme: {
+        color: '#3399cc',
+      },
+    }
+    var rzp1 = new Razorpay(options)
+    rzp1.open()
+    rzp1.on('payment.failed', function (response) {})
   }
   return (
     <>
@@ -127,7 +157,7 @@ const Cart = () => {
                 <h3>Price</h3>
                 <h3>Delivery charges</h3>
                 <h3>Total</h3>
-                <button className="cart-btn">Place order</button>
+                <button className="cart-btn" onClick={paymentintegration}>Place order</button>
                 <div className="price">
                   <h3>{cart.length}</h3>
                   <h3>{totalPrice}</h3>
